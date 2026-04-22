@@ -1,101 +1,250 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>IG lebändigs Robischwyl</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #34495e;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 8px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IG lebändigs Robischwyl</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+/* HEADER */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.button {
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 420px;
+  background: linear-gradient(to right, rgba(30,58,138,0.85), rgba(30,58,138,0.2)),
+              url('rupperswil.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  max-width: 500px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ACTIVITIES */
+.activities {
+  padding: 40px;
+}
+
+.activity-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.activity-container img {
+  width: 500px;
+  border-radius: 12px;
+}
+
+.activity-text h3 {
+  color: #1e3a8a;
+}
+
+/* CTA */
+.cta {
+  background: #1e3a8a;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+footer img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>IG lebändigs Robischwyl</h1>
-  <p>Gemeinschaft. Integration. Miteinander.</p>
-</header>
-
+<!-- NAV -->
 <nav>
-  <a href="#about">Über uns</a>
-  <a href="#activities">Aktivitäten</a>
-  <a href="#join">Mitmachen</a>
-  <a href="#contact">Kontakt</a>
+  <div class="logo">
+    <img src="logo.png">
+    <div>
+      <strong>IG lebändigs Robischwyl</strong><br>
+      <small>Gemeinschaft · Integration · Generationen</small>
+    </div>
+  </div>
+
+  <div>
+    <a href="#">Über uns</a>
+    <a href="#">Aktivitäten</a>
+    <a href="#">Mitmachen</a>
+    <a href="#">Kontakt</a>
+    <a class="button" href="mailto:info@iglr.ch">Kontakt aufnehmen</a>
+  </div>
 </nav>
 
-<section id="about">
-  <h2>Über uns</h2>
-  <p>
-    Wir sind ein gemeinnütziger Verein in Rupperswil und setzen uns für den
-    gesellschaftlichen Zusammenhalt, die soziale Integration und die
-    generationenübergreifende Begegnung ein.
-  </p>
-  <p>
-    Unsere Angebote sind öffentlich zugänglich und fördern das Miteinander
-    in unserer Gemeinde.
-  </p>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>IG lebändigs Robischwyl</h1>
+    <p>
+      Wir fördern den gesellschaftlichen Zusammenhalt,
+      die soziale Integration und verbinden Generationen in Rupperswil.
+    </p>
+  </div>
 </section>
 
-<section id="activities">
-  <h2>Aktivitäten</h2>
-  <ul>
-    <li>Gemeinschaftsanlässe für alle Generationen</li>
-    <li>Projekte zur Förderung des sozialen Austauschs</li>
-    <li>Veranstaltungen zur kulturellen Teilhabe</li>
-  </ul>
+<section class="activities" style="background:#eef2ff; border-radius:12px; margin:40px;">
+  
+  <h2 style="text-align:center;">Unser nächster Event</h2>
+
+  <div class="activity-container">
+
+    <!-- Bild -->
+    <img src="1august.jpg" alt="1. Augustbrunch Rupperswil">
+
+    <!-- Text -->
+    <div class="activity-text">
+      <h3>1. Augustbrunch mit Bundesfeier auf dem Auhof</h3>
+
+      <p>
+        Unser nächster Event: 1. Augustbrunch mit anschliessender Bundesfeier
+        auf dem Auhof in Rupperswil.
+      </p>
+
+      <p>
+        Die IG Lebändigs Robischwyl organisiert in Zusammenarbeit mit der
+        Gemeinde Rupperswil einen 1. Augustbrunch sowie die öffentliche
+        offizielle Bundesfeier von Rupperswil.
+      </p>
+
+      <p>
+        Weitere Infos sowie die Anmeldung für den Brunch folgen.
+      </p>
+    </div>
+
+  </div>
 </section>
 
-<section id="join">
-  <h2>Mitmachen</h2>
-  <p>
-    Möchtest du Teil unseres Vereins werden oder uns unterstützen?
-    Wir freuen uns über neue Mitglieder und engagierte Menschen.
-  </p>
+<!-- CARDS -->
+<section class="cards">
+  <div class="card">
+    <h3>Gemeinschaft</h3>
+    <p>Wir schaffen Begegnungen und stärken den Zusammenhalt.</p>
+  </div>
+  <div class="card">
+    <h3>Integration</h3>
+    <p>Wir fördern soziale Integration und respektvolles Miteinander.</p>
+  </div>
+  <div class="card">
+    <h3>Generationen</h3>
+    <p>Wir verbinden Jung und Alt.</p>
+  </div>
 </section>
 
-<section id="contact">
-  <h2>Kontakt</h2>
-  <p>Email: info@iglr.ch</p>
+<!-- ACTIVITIES -->
+<section class="activities">
+  <h2 style="text-align:center;">Unsere Aktivitäten</h2>
+
+  <div class="activity-container">
+    <img src="silvester.jpg">
+
+    <div class="activity-text">
+      <h3>Silvesterfeuer 2025</h3>
+      <p>
+        Rund 100–120 Personen folgten der Einladung zum traditionellen Silvesterfeuer.
+        Bei sternenklarer, kalter Nacht genossen wir Glühwein, Sekt, Bier und Punsch für die Kinder.
+        Dazu wurden feine Lebkuchen angeboten.
+      </p>
+      <p>
+        Die tiefen Temperaturen liessen sogar das Bier gefrieren.
+      </p>
+      <p><strong>
+        Ein herzliches Dankeschön an unsere Sponsoren:
+      </strong><br>
+        Wisler Pferdetransporter GmbH, Raiffeisen Bank Aare Reuss
+        und Forstbetrieb Rupperswil für das Holz.
+      </p>
+    </div>
+  </div>
 </section>
 
+<!-- CTA -->
+<section class="cta">
+  <h2>Werde Teil unserer Gemeinschaft!</h2>
+  <p>Engagiere dich für ein lebendiges Miteinander in Rupperswil.</p>
+</section>
+
+<!-- FOOTER -->
 <footer>
+  <img src="logo.png">
+  <p>IG lebändigs Robischwyl · Rupperswil, Aargau</p>
+  <p>info@iglr.ch</p>
   <p>© 2026 IG lebändigs Robischwyl</p>
 </footer>
 
