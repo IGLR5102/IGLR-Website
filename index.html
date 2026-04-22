@@ -15,19 +15,20 @@ body {
   color: #1f2937;
 }
 
-/* HEADER */
+/* NAV */
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
+  align-items: center;
+  padding: 15px 30px;
   background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .logo img {
@@ -35,24 +36,23 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
-  color: #1f2937;
   font-weight: 600;
+  color: #1f2937;
 }
 
-.button {
+.cta-btn {
   background: #1e3a8a;
   color: white;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 8px;
-  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   height: 420px;
-  background: linear-gradient(to right, rgba(30,58,138,0.85), rgba(30,58,138,0.2)),
+  background: linear-gradient(to right, rgba(30,58,138,0.8), rgba(30,58,138,0.2)),
               url('rupperswil.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
@@ -61,46 +61,55 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 3em;
+  font-size: 2.8em;
 }
 
 .hero p {
   max-width: 500px;
 }
 
-/* CARDS */
+/* SECTION */
+.section {
+  padding: 50px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
 .cards {
   display: flex;
   gap: 20px;
-  padding: 40px;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  width: 250px;
+  flex: 1;
+  min-width: 250px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* ACTIVITIES */
-.activities {
-  padding: 40px;
-}
-
-.activity-container {
+/* EVENTS */
+.event {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
   align-items: center;
+  margin-top: 30px;
 }
 
-.activity-container img {
-  width: 500px;
+.event img {
+  width: 100%;
+  max-width: 450px;
   border-radius: 12px;
 }
 
-.activity-text h3 {
+.event-text {
+  flex: 1;
+}
+
+.event-text h3 {
   color: #1e3a8a;
 }
 
@@ -108,21 +117,37 @@ nav a {
 .cta {
   background: #1e3a8a;
   color: white;
-  padding: 40px;
   text-align: center;
+  padding: 50px 20px;
 }
 
 /* FOOTER */
 footer {
   background: #0f172a;
   color: white;
-  padding: 30px;
   text-align: center;
+  padding: 30px;
 }
 
 footer img {
   height: 40px;
-  margin-bottom: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 </style>
 </head>
@@ -134,101 +159,93 @@ footer img {
   <div class="logo">
     <img src="logo.png">
     <div>
-      <strong>IG lebändigs Robischwyl - Verein für Gemeinschaft und Integration Rupperswil</strong><br>
-      <small>Gemeinschaft · Integration · Generationen</small>
+      <strong>IG lebändigs Robischwyl</strong><br>
+      <small>Verein für Gemeinschaft und Integration Rupperswil</small>
     </div>
   </div>
 
   <div>
     <a href="#">Über uns</a>
     <a href="#">Aktivitäten</a>
-    <a href="#">Mitmachen</a>
     <a href="#">Kontakt</a>
-    <a class="button" href="mailto:info@iglr.ch">Kontakt aufnehmen</a>
+    <a class="cta-btn" href="mailto:info@iglr.ch">Mitmachen</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div>
-    <h1>IG lebändigs Robischwyl</h1>
+    <h1>Gemeinsam für ein lebendiges Rupperswil</h1>
     <p>
-      Wir fördern den gesellschaftlichen Zusammenhalt,
-      die soziale Integration und verbinden Generationen in Rupperswil.
+      Als Verein für Gemeinschaft und Integration fördern wir Kultur,
+      stärken den Zusammenhalt und verbinden Generationen.
     </p>
   </div>
 </section>
 
-<section class="activities" style="background:#eef2ff; border-radius:12px; margin:40px;">
-  
-  <h2 style="text-align:center;">Unser nächster Event</h2>
-
-  <div class="activity-container">
-
-    <!-- Bild -->
-    <img src="1august.jpg" alt="1. Augustbrunch Rupperswil">
-
-    <!-- Text -->
-    <div class="activity-text">
-      <h3>1. Augustbrunch mit Bundesfeier auf dem Auhof</h3>
-
-      <p>
-        Unser nächster Event: 1. Augustbrunch mit anschliessender Bundesfeier
-        auf dem Auhof in Rupperswil.
-      </p>
-
-      <p>
-        Die IG Lebändigs Robischwyl organisiert in Zusammenarbeit mit der
-        Gemeinde Rupperswil einen 1. Augustbrunch sowie die öffentliche
-        offizielle Bundesfeier von Rupperswil.
-      </p>
-
-      <p>
-        Weitere Infos sowie die Anmeldung für den Brunch folgen.
-      </p>
-    </div>
-
-  </div>
+<!-- ABOUT -->
+<section class="section">
+  <h2>Über uns</h2>
+  <p>
+    Die IG lebändigs Robischwyl ist ein gemeinnütziger Verein mit dem Ziel,
+    den gesellschaftlichen Zusammenhalt, die Integration und die
+    generationenübergreifende Begegnung in Rupperswil zu fördern.
+  </p>
 </section>
 
 <!-- CARDS -->
-<section class="cards">
+<section class="section cards">
   <div class="card">
     <h3>Gemeinschaft</h3>
-    <p>Wir schaffen Begegnungen und stärken den Zusammenhalt.</p>
+    <p>Wir schaffen Begegnungen und stärken das Miteinander.</p>
   </div>
   <div class="card">
     <h3>Integration</h3>
-    <p>Wir fördern soziale Integration und respektvolles Miteinander.</p>
+    <p>Wir fördern ein offenes und respektvolles Zusammenleben.</p>
   </div>
   <div class="card">
     <h3>Generationen</h3>
-    <p>Wir verbinden Jung und Alt.</p>
+    <p>Wir verbinden Jung und Alt durch gemeinsame Erlebnisse.</p>
   </div>
 </section>
 
-<!-- ACTIVITIES -->
-<section class="activities">
-  <h2 style="text-align:center;">Unsere Aktivitäten</h2>
+<!-- SILVESTER -->
+<section class="section">
+  <h2>Unsere Aktivitäten</h2>
 
-  <div class="activity-container">
+  <div class="event">
     <img src="silvester.jpg">
-
-    <div class="activity-text">
+    <div class="event-text">
       <h3>Silvesterfeuer 2025</h3>
       <p>
-        Rund 100–120 Personen folgten der Einladung zum traditionellen Silvesterfeuer.
-        Bei sternenklarer, kalter Nacht genossen wir Glühwein, Sekt, Bier und Punsch für die Kinder.
-        Dazu wurden feine Lebkuchen angeboten.
+        Rund 100–120 Personen genossen eine sternenklare, kalte Nacht mit
+        Glühwein, Sekt, Bier und Punsch für die Kinder.
       </p>
       <p>
         Die tiefen Temperaturen liessen sogar das Bier gefrieren.
       </p>
       <p><strong>
-        Ein herzliches Dankeschön an unsere Sponsoren:
+        Danke an unsere Sponsoren:
       </strong><br>
-        Wisler Pferdetransporter GmbH, Raiffeisen Bank Aare Reuss
-        und Forstbetrieb Rupperswil für das Holz.
+      Wisler Pferdetransporter GmbH, Raiffeisen Bank Aare Reuss,
+      Forstbetrieb Rupperswil.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 1. AUGUST -->
+<section class="section">
+  <div class="event">
+    <img src="1august.jpg">
+    <div class="event-text">
+      <h3>1. Augustbrunch mit Bundesfeier auf dem Auhof</h3>
+      <p>
+        In Zusammenarbeit mit der Gemeinde Rupperswil organisieren wir
+        einen 1. Augustbrunch sowie die offizielle Bundesfeier.
+      </p>
+      <p>
+        Weitere Infos und Anmeldung folgen.
       </p>
     </div>
   </div>
@@ -236,15 +253,15 @@ footer img {
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Werde Teil unserer Gemeinschaft!</h2>
-  <p>Engagiere dich für ein lebendiges Miteinander in Rupperswil.</p>
+  <h2>Werde Teil unserer Gemeinschaft</h2>
+  <p>Gemeinsam gestalten wir ein lebendiges Rupperswil.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <img src="logo.png">
-  <p>IG lebändigs Robischwyl · Rupperswil, Aargau</p>
-  <p>info@iglr.ch</p>
+  <p><strong>Verein für Gemeinschaft und Integration Rupperswil</strong></p>
+  <p>info@iglr.ch · www.iglr.ch</p>
   <p>© 2026 IG lebändigs Robischwyl</p>
 </footer>
 
