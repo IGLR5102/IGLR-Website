@@ -15,7 +15,6 @@ body {
   color: #1f2937;
 }
 
-/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
@@ -23,6 +22,7 @@ nav {
   padding: 15px 30px;
   background: white;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -36,7 +36,7 @@ nav {
 }
 
 nav a {
-  margin: 0 12px;
+  margin: 5px 10px;
   text-decoration: none;
   font-weight: 600;
   color: #1f2937;
@@ -49,7 +49,6 @@ nav a {
   border-radius: 8px;
 }
 
-/* HERO */
 .hero {
   height: 420px;
   background: linear-gradient(to right, rgba(30,58,138,0.8), rgba(30,58,138,0.2)),
@@ -61,14 +60,9 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
 }
 
-.hero p {
-  max-width: 500px;
-}
-
-/* SECTION */
 .section {
   padding: 50px 30px;
   max-width: 1100px;
@@ -90,7 +84,6 @@ nav a {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* EVENTS */
 .event {
   display: flex;
   gap: 30px;
@@ -109,11 +102,6 @@ nav a {
   flex: 1;
 }
 
-.event-text h3 {
-  color: #1e3a8a;
-}
-
-/* CTA */
 .cta {
   background: #1e3a8a;
   color: white;
@@ -121,7 +109,6 @@ nav a {
   padding: 50px 20px;
 }
 
-/* FOOTER */
 footer {
   background: #0f172a;
   color: white;
@@ -133,20 +120,10 @@ footer img {
   height: 40px;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .hero {
     height: auto;
     padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 10px;
   }
 }
 </style>
@@ -154,7 +131,6 @@ footer img {
 
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo">
     <img src="logo.png">
@@ -167,12 +143,12 @@ footer img {
   <div>
     <a href="#">Über uns</a>
     <a href="#">Aktivitäten</a>
-    <a href="#">Kontakt</a>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
     <a class="cta-btn" href="mailto:info@iglr.ch">Mitmachen</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div>
     <h1>Gemeinsam für ein lebendiges Rupperswil</h1>
@@ -183,7 +159,6 @@ footer img {
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section">
   <h2>Über uns</h2>
   <p>
@@ -193,7 +168,6 @@ footer img {
   </p>
 </section>
 
-<!-- CARDS -->
 <section class="section cards">
   <div class="card">
     <h3>Gemeinschaft</h3>
@@ -209,7 +183,6 @@ footer img {
   </div>
 </section>
 
-<!-- SILVESTER -->
 <section class="section">
   <h2>Unsere Aktivitäten</h2>
 
@@ -217,24 +190,12 @@ footer img {
     <img src="silvester.jpg">
     <div class="event-text">
       <h3>Silvesterfeuer 2025</h3>
-      <p>
-        Rund 100–120 Personen genossen eine sternenklare, kalte Nacht mit
-        Glühwein, Sekt, Bier und Punsch für die Kinder.
-      </p>
-      <p>
-        Die tiefen Temperaturen liessen sogar das Bier gefrieren.
-      </p>
-      <p><strong>
-        Danke an unsere Sponsoren:
-      </strong><br>
-      Wisler Pferdetransporter GmbH, Raiffeisen Bank Aare Reuss,
-      Forstbetrieb Rupperswil.
-      </p>
+      <p>Rund 100–120 Personen genossen eine sternenklare Nacht.</p>
+      <p>Danke an unsere Sponsoren.</p>
     </div>
   </div>
 </section>
 
-<!-- 1. AUGUST -->
 <section class="section">
   <div class="event">
     <img src="1august.jpg">
@@ -244,25 +205,36 @@ footer img {
         In Zusammenarbeit mit der Gemeinde Rupperswil organisieren wir
         einen 1. Augustbrunch sowie die offizielle Bundesfeier.
       </p>
-      <p>
-        Weitere Infos und Anmeldung folgen.
-      </p>
+      <p>Weitere Infos folgen.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta">
   <h2>Werde Teil unserer Gemeinschaft</h2>
-  <p>Gemeinsam gestalten wir ein lebendiges Rupperswil.</p>
 </section>
 
-<!-- FOOTER -->
+<section class="section" id="impressum">
+  <h2>Impressum</h2>
+  <p>
+    <strong>IG lebändigs Robischwyl - Verein für Gemeinschaft und Integration Rupperswil</strong><br>
+    5102 Rupperswil<br>
+    Schweiz<br>
+    E-Mail: info@iglr.ch
+  </p>
+</section>
+
+<section class="section" id="datenschutz">
+  <h2>Datenschutz</h2>
+  <p>
+    Wir behandeln personenbezogene Daten vertraulich gemäss Schweizer Datenschutzgesetz.
+  </p>
+</section>
+
 <footer>
   <img src="logo.png">
-  <p><strong>Verein für Gemeinschaft und Integration Rupperswil</strong></p>
-  <p>info@iglr.ch · www.iglr.ch</p>
-  <p>© 2026 IG lebändigs Robischwyl</p>
+  <p>Verein für Gemeinschaft und Integration Rupperswil</p>
+  <p>info@iglr.ch</p>
 </footer>
 
 </body>
