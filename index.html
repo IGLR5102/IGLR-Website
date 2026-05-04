@@ -134,12 +134,8 @@ nav a:hover::after { width:100%; }
   stroke:#1e3a8a;
   stroke-width:1.8;
   fill:none;
-  margin-bottom:10px;
-  transition:0.3s;
-}
-
-.card:hover .icon {
-  transform:scale(1.15) rotate(3deg);
+  margin-top:4px;
+  flex-shrink:0;
 }
 
 /* CTA */
@@ -203,7 +199,7 @@ footer {
   </div>
 
   <div>
-    <a href="#about">Über uns</a>
+    <a href="#about">Mission</a>
     <a href="#activities">Aktivitäten</a>
     <a href="#impressum">Impressum</a>
     <a href="#datenschutz">Datenschutz</a>
@@ -211,6 +207,7 @@ footer {
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div style="max-width:600px; animation:fadeIn 1.2s;">
     <h1>Gemeinsam für ein lebendiges Rupperswil</h1>
@@ -218,59 +215,126 @@ footer {
   </div>
 </section>
 
+<!-- MISSION -->
 <section class="section" id="about">
-  <h2>Über uns</h2>
-  <p>Gemeinnütziger Verein für Gemeinschaft und Integration in Rupperswil.</p>
+
+<h2 style="text-align:center;">Mission</h2>
+
+<p style="text-align:center; max-width:700px; margin:10px auto 40px auto; color:#6b7280;">
+Für ein lebendiges, verbundenes und generationenübergreifendes Dorfleben in Rupperswil.
+</p>
+
+<div style="max-width:800px; margin:auto; display:flex; flex-direction:column; gap:20px;">
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+<p>Begegnungen zwischen Jung und Alt fördern</p>
+</div>
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg>
+<p>Freizeitangebote für Kinder und Jugendliche</p>
+</div>
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16"/><path d="M12 4v16"/></svg>
+<p>Öffentliche Veranstaltungen organisieren</p>
+</div>
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/><circle cx="16" cy="10" r="3"/></svg>
+<p>Integration und Zusammenhalt stärken</p>
+</div>
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+<p>Lokale Traditionen pflegen</p>
+</div>
+
+<div style="display:flex; gap:15px;">
+<svg class="icon" viewBox="0 0 24 24"><path d="M12 3C8 8 6 12 12 21C18 12 16 8 12 3Z"/></svg>
+<p>Gemeinwohl und Lebensqualität verbessern</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- VORSTAND -->
+<!-- VEREINSFÜHRUNG -->
 <section class="section">
-  <h2>Vorstand</h2>
-  <div class="cards">
-    <div class="card"><h3>Fabian Kummer</h3><p>Präsident</p></div>
-    <div class="card"><h3>Marc E. Friedli</h3><p>Finanzen</p></div>
-    <div class="card"><h3>Michael Brudermann</h3><p>Ehrenpräsident</p></div>
-  </div>
+
+<h2 style="text-align:center;">Unsere Vereinsführung</h2>
+
+<p style="text-align:center; color:#6b7280;">
+Der Verein wird durch einen ehrenamtlichen Vorstand geführt.
+</p>
+
+<div class="cards">
+<div class="card"><h3>Fabian Kummer</h3><p>Präsident</p></div>
+<div class="card"><h3>Marc E. Friedli</h3><p>Leiter Finanzen</p></div>
+<div class="card"><h3>Michael Brudermann</h3><p>Ehrenpräsident</p></div>
+</div>
+
 </section>
 
-<!-- EVENTS -->
+<!-- AKTIVITÄTEN -->
 <section class="section" id="activities">
-  <h2>Aktivitäten</h2>
 
-  <div class="event">
-    <img src="silvester.jpg">
-    <p>Silvesterfeuer 2025</p>
-  </div>
+<h2>Aktivitäten</h2>
 
-  <div class="event">
-    <img src="1august.jpg">
-    <p>1. Augustbrunch</p>
-  </div>
+<div class="event">
+<img src="silvester.jpg">
+<p>Silvesterfeuer 2025</p>
+</div>
+
+<div class="event">
+<img src="1august.jpg">
+<p>1. Augustbrunch mit Bundesfeier</p>
+</div>
+
+</section>
+
+<!-- VISION -->
+<section class="section">
+
+<h2 style="text-align:center;">Vision – weitere Events in Planung</h2>
+
+<div class="cards">
+<div class="card"><p>Spielnachmittag</p></div>
+<div class="card"><p>Kubb-Turnier</p></div>
+<div class="card"><p>Neophyten-Aktionstag</p></div>
+<div class="card"><p>Clean Up Day</p></div>
+<div class="card"><p>Herbstmarkt</p></div>
+<div class="card"><p>Adventsfenster</p></div>
+</div>
+
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Werde Teil unserer Gemeinschaft</h2>
 
-  <div style="margin-top:20px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-    <a href="mailto:info@iglr.ch" style="background:white;color:#1e3a8a;padding:12px 22px;border-radius:10px;text-decoration:none;">Kontakt</a>
-    <a href="mailto:info@iglr.ch" style="background:#0f172a;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;">Mitglied werden</a>
-  </div>
+<h2>Werde Teil unserer Gemeinschaft</h2>
+
+<div style="margin-top:20px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+<a href="mailto:info@iglr.ch" style="background:white;color:#1e3a8a;padding:12px 22px;border-radius:10px;text-decoration:none;">Kontakt</a>
+<a href="mailto:info@iglr.ch" style="background:#0f172a;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;">Mitglied werden</a>
+</div>
+
 </section>
 
 <section class="section" id="impressum">
-  <h2>Impressum</h2>
-  <p>Rupperswil · info@iglr.ch</p>
+<h2>Impressum</h2>
+<p>Rupperswil · info@iglr.ch</p>
 </section>
 
 <section class="section" id="datenschutz">
-  <h2>Datenschutz</h2>
-  <p>Gemäss Schweizer Datenschutzgesetz.</p>
+<h2>Datenschutz</h2>
+<p>Gemäss Schweizer Datenschutzgesetz.</p>
 </section>
 
 <footer>
-  <img src="logo.png">
-  <p>IGLR</p>
+<img src="logo.png">
+<p>IG lebändigs Robischwyl</p>
 </footer>
 
 </body>
