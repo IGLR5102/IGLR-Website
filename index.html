@@ -154,7 +154,7 @@ nav a:hover::after { width:100%; }
   transform:translateY(-2px);
 }
 
-/* VISION INTERACTION */
+/* VISION */
 .vision-card { cursor:pointer; }
 
 .vision-text {
@@ -200,8 +200,10 @@ footer {
   </div>
 
   <div>
+    <a href="#verein">Verein</a>
     <a href="#about">Mission</a>
     <a href="#activities">Aktivitäten</a>
+    <a href="#vision">Vision</a>
     <a href="#impressum">Impressum</a>
     <a href="#datenschutz">Datenschutz</a>
     <a class="cta-btn" href="mailto:info@iglr.ch">Mitmachen</a>
@@ -215,100 +217,65 @@ footer {
   </div>
 </section>
 
-<!-- MISSION -->
+<section class="section" id="verein">
+  <h2>UNSER VEREIN</h2>
+  <p>
+    Die IG lebändigs Robischwyl ist ein gemeinnütziger Verein mit dem Ziel,
+    den gesellschaftlichen Zusammenhalt, die Integration und die
+    generationenübergreifende Begegnung in Rupperswil zu fördern.
+  </p>
+</section>
+
+<section class="section cards">
+  <div class="card">
+    <h3>Gemeinschaft</h3>
+    <p>Wir schaffen Begegnungen und stärken das Miteinander.</p>
+  </div>
+  <div class="card">
+    <h3>Integration</h3>
+    <p>Wir fördern ein offenes und respektvolles Zusammenleben.</p>
+  </div>
+  <div class="card">
+    <h3>Generationen</h3>
+    <p>Wir verbinden Jung und Alt durch gemeinsame Erlebnisse.</p>
+  </div>
+</section>
+
 <section class="section" id="about">
 <h2 style="text-align:center;">Mission</h2>
-
 <div style="max-width:800px; margin:auto; display:flex; flex-direction:column; gap:20px;">
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
-<p>Begegnungen zwischen Jung und Alt fördern</p>
-</div>
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg>
-<p>Sinnvolle Freizeitangebote für Kinder und Jugendliche durchführen</p>
-</div>
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16"/></svg>
-<p>Öffentliche Veranstaltungen organisieren</p>
-</div>
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/></svg>
-<p>Integration und Zusammenhalt stärken</p>
-</div>
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18"/></svg>
-<p>Lokale Traditionen pflegen</p>
-</div>
-
-<div style="display:flex; gap:15px;">
-<svg class="icon" viewBox="0 0 24 24"><path d="M12 3C8 8 6 12 12 21"/></svg>
-<p>Gemeinwohl und Lebensqualität verbessern</p>
-</div>
-
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg><p>Begegnungen zwischen Jung und Alt fördern</p></div>
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12"/></svg><p>Sinnvolle Freizeitangebote für Kinder und Jugendliche durchführen</p></div>
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16"/></svg><p>Öffentliche Veranstaltungen organisieren</p></div>
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><circle cx="8" cy="10" r="3"/></svg><p>Integration und Zusammenhalt stärken</p></div>
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18"/></svg><p>Lokale Traditionen pflegen</p></div>
+<div style="display:flex; gap:15px;"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3C8 8 6 12 12 21"/></svg><p>Gemeinwohl und Lebensqualität verbessern</p></div>
 </div>
 </section>
 
-<!-- VEREINSFÜHRUNG -->
-<section class="section">
-<h2 style="text-align:center;">Unsere Vereinsführung</h2>
-
-<p style="text-align:center; color:#6b7280;">
-Der Verein für Gemeinschaft und Integration Rupperswil wird durch einen ehrenamtlichen Vorstand geführt.
-</p>
-
-<div class="cards">
-<div class="card"><h3>Fabian Kummer</h3><p>Präsident</p></div>
-<div class="card"><h3>Marc E. Friedli</h3><p>Aktuar & Leiter Finanzen</p></div>
-<div class="card"><h3>Michael Brudermann</h3><p>Ehrenpräsident</p></div>
-</div>
-</section>
-
-<!-- AKTIVITÄTEN -->
-<section class="section" id="activities">
-<h2>Aktivitäten</h2>
-
-<div class="event">
-<img src="silvester.jpg">
-<p>Silvesterfeuer 2025</p>
-</div>
-
-<div class="event">
-<img src="1august.jpg">
-<p>1. Augustbrunch mit Bundesfeier</p>
-</div>
-
-</section>
-
-<!-- VISION -->
-<section class="section">
+<section class="section" id="vision">
 <h2 style="text-align:center;">Vision – weitere Engagements in Planung</h2>
 
 <div class="cards">
 
 <div class="card vision-card" onclick="toggleVision(this)">
 <h3>Spielnachmittag im Altersheim</h3>
-<div class="vision-text">Begegnungen zwischen Generationen - Wir organisieren einen stufen- und altersgerechten Spiele-Nachmittag im Alters- und Pflegeheim Rupperswil und fördern so den Austausch zwischen den Generationen .</div>
+<div class="vision-text">Begegnungen zwischen Generationen - Wir organisieren einen stufen- und altersgerechten Spiele-Nachmittag im Alters- und Pflegeheim Rupperswil und fördern so den Austausch zwischen den Generationen.</div>
 </div>
 
 <div class="card vision-card" onclick="toggleVision(this)">
 <h3>Kubb-Turnier für Zuhause-Gebliebene</h3>
-<div class="vision-text">In Zusammenarbeit mit der Jugendarbeit Lotten organisieren wir für alle Daheim-Gebliebenen in der letzten Sommerferienwoche für die Schülerschaft der Kreisschule Lotten ein Kubb-Turnier auf der Sportwiese in Rupperswil .</div>
+<div class="vision-text">In Zusammenarbeit mit der Jugendarbeit Lotten organisieren wir für alle Daheim-Gebliebenen in der letzten Sommerferienwoche für die Schülerschaft der Kreisschule Lotten ein Kubb-Turnier auf der Sportwiese in Rupperswil.</div>
 </div>
 
 <div class="card vision-card" onclick="toggleVision(this)">
 <h3>Neophytenbekämpfung</h3>
-<div class="vision-text">Zusammen mit dem Forstbetrieb Rupperwil befreien wir die Robischwyler Auenlandschaft von schädlichen Neophyten und vermitteln den Teilnehmenden wertvolle Infos zur Biodiversität und zur Auenschutzlandschaft Rupperswil.</div>
+<div class="vision-text">Zusammen mit dem Forstbetrieb Rupperswil befreien wir die Robischwyler Auenlandschaft von schädlichen Neophyten und vermitteln den Teilnehmenden wertvolle Infos zur Biodiversität und zur Auenschutzlandschaft Rupperswil.</div>
 </div>
 
 <div class="card vision-card" onclick="toggleVision(this)">
 <h3>Clean Up Day</h3>
-<div class="vision-text">Gemeinsam sammeln wir den Abfall entlang der berühmten Eichstrecke zwischen Rupperswil & Rohr ein. Im Anschluss soll die Gemeinschaft bei einem gemütlichen Grill-Buffet gepflegt werden .</div>
+<div class="vision-text">Gemeinsam sammeln wir den Abfall entlang der berühmten Eichstrecke zwischen Rupperswil & Rohr ein. Im Anschluss soll die Gemeinschaft bei einem gemütlichen Grill-Buffet gepflegt werden.</div>
 </div>
 
 <div class="card vision-card" onclick="toggleVision(this)">
@@ -324,7 +291,25 @@ Der Verein für Gemeinschaft und Integration Rupperswil wird durch einen ehrenam
 </div>
 </section>
 
-<!-- CTA -->
+<section class="section" id="activities">
+<h2>Aktivitäten</h2>
+
+<div class="event">
+<img src="silvester.jpg">
+<p>Silvesterfeuer 2025</p>
+<p>Rund 100–120 Personen genossen eine sternenklare Nacht.</p>
+<p>Danke an unsere Sponsoren Raiffeisenbank Aare - Reuss, Wisler Pferdetransporter GmbH sowie dem Forstbetrieb Rupperswil für das Brennholz.</p>
+</div>
+
+<div class="event">
+<img src="1august.jpg">
+<p>1. Augustbrunch mit Bundesfeier auf dem Auhof</p>
+<p>In Zusammenarbeit mit der Gemeinde Rupperswil organisieren wir einen 1. Augustbrunch sowie die offizielle Bundesfeier.</p>
+<p>Weitere Infos folgen.</p>
+</div>
+
+</section>
+
 <section class="cta">
 <h2>Werde Teil unserer Gemeinschaft</h2>
 
@@ -352,7 +337,10 @@ Der Verein für Gemeinschaft und Integration Rupperswil wird durch einen ehrenam
 
 <script>
 function toggleVision(card){
-card.classList.toggle("active");
+  document.querySelectorAll('.vision-card').forEach(c => {
+    if(c !== card) c.classList.remove("active");
+  });
+  card.classList.toggle("active");
 }
 </script>
 
