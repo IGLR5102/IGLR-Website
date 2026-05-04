@@ -8,123 +8,185 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+html { scroll-behavior:smooth; }
+
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: #f4f7fb;
-  color: #1f2937;
+  font-family:'Inter',sans-serif;
+  margin:0;
+  background:#f4f7fb;
+  color:#1f2937;
+  line-height:1.6;
 }
 
+/* NAV */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  flex-wrap:wrap;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo img {
-  height: 50px;
-}
+.logo { display:flex; align-items:center; gap:12px; }
+.logo img { height:50px; }
 
 nav a {
-  margin: 5px 10px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #1f2937;
+  margin:5px 10px;
+  text-decoration:none;
+  font-weight:600;
+  color:#1f2937;
+  position:relative;
 }
+
+nav a::after {
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  bottom:-3px;
+  left:0;
+  background:#1e3a8a;
+  transition:0.3s;
+}
+
+nav a:hover::after { width:100%; }
 
 .cta-btn {
-  background: #1e3a8a;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 8px;
+  background:#1e3a8a;
+  color:white;
+  padding:10px 16px;
+  border-radius:8px;
 }
 
+/* HERO */
 .hero {
-  height: 420px;
+  height:420px;
   background: linear-gradient(to right, rgba(30,58,138,0.8), rgba(30,58,138,0.2)),
               url('rupperswil.jpg') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 40px;
-  color: white;
+  display:flex;
+  align-items:center;
+  padding:40px;
+  color:white;
 }
 
-.hero h1 {
-  font-size: 2.5em;
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
+/* SECTION */
 .section {
-  padding: 50px 30px;
-  max-width: 1100px;
-  margin: auto;
+  padding:70px 30px;
+  max-width:1100px;
+  margin:auto;
 }
 
+.section:nth-child(even) {
+  background:#f8fafc;
+}
+
+/* CARDS */
 .cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  flex: 1;
-  min-width: 250px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  flex:1;
+  min-width:250px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+  transition:0.3s;
 }
 
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* EVENTS */
 .event {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-top: 30px;
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:30px;
 }
 
 .event img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 12px;
+  width:100%;
+  max-width:450px;
+  border-radius:12px;
+  transition:0.4s;
 }
 
-.event-text {
-  flex: 1;
+.event img:hover { transform:scale(1.02); }
+
+/* ICONS */
+.icon {
+  width:36px;
+  height:36px;
+  stroke:#1e3a8a;
+  stroke-width:1.8;
+  fill:none;
+  margin-bottom:10px;
+  transition:0.3s;
 }
 
+.card:hover .icon {
+  transform:scale(1.15) rotate(3deg);
+}
+
+/* CTA */
 .cta {
-  background: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
+  background:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:50px 20px;
 }
 
+.cta a {
+  transition:0.3s;
+}
+
+.cta a:hover {
+  transform:translateY(-2px);
+}
+
+/* FOOTER */
 footer {
-  background: #0f172a;
-  color: white;
-  text-align: center;
-  padding: 30px;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:30px;
 }
 
-footer img {
-  height: 40px;
-}
+/* MOBILE */
+@media(max-width:768px){
 
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
+  nav {
+    flex-direction:column;
+    text-align:center;
   }
+
+  .hero {
+    height:auto;
+    padding:60px 20px;
+    text-align:center;
+  }
+
+  .section {
+    padding:50px 20px;
+  }
+
+  .cards { flex-direction:column; }
+  .event { flex-direction:column; }
+
 }
 </style>
 </head>
@@ -141,8 +203,8 @@ footer img {
   </div>
 
   <div>
-    <a href="#">Über uns</a>
-    <a href="#">Aktivitäten</a>
+    <a href="#about">Über uns</a>
+    <a href="#activities">Aktivitäten</a>
     <a href="#impressum">Impressum</a>
     <a href="#datenschutz">Datenschutz</a>
     <a class="cta-btn" href="mailto:info@iglr.ch">Mitmachen</a>
@@ -150,91 +212,65 @@ footer img {
 </nav>
 
 <section class="hero">
-  <div>
+  <div style="max-width:600px; animation:fadeIn 1.2s;">
     <h1>Gemeinsam für ein lebendiges Rupperswil</h1>
-    <p>
-      Als Verein für Gemeinschaft und Integration fördern wir Kultur,
-      stärken den Zusammenhalt und verbinden Generationen.
-    </p>
+    <p>Wir fördern Gemeinschaft, Integration und Generationen.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="about">
   <h2>Über uns</h2>
-  <p>
-    Die IG lebändigs Robischwyl ist ein gemeinnütziger Verein mit dem Ziel,
-    den gesellschaftlichen Zusammenhalt, die Integration und die
-    generationenübergreifende Begegnung in Rupperswil zu fördern.
-  </p>
+  <p>Gemeinnütziger Verein für Gemeinschaft und Integration in Rupperswil.</p>
 </section>
 
-<section class="section cards">
-  <div class="card">
-    <h3>Gemeinschaft</h3>
-    <p>Wir schaffen Begegnungen und stärken das Miteinander.</p>
-  </div>
-  <div class="card">
-    <h3>Integration</h3>
-    <p>Wir fördern ein offenes und respektvolles Zusammenleben.</p>
-  </div>
-  <div class="card">
-    <h3>Generationen</h3>
-    <p>Wir verbinden Jung und Alt durch gemeinsame Erlebnisse.</p>
-  </div>
-</section>
-
+<!-- VORSTAND -->
 <section class="section">
-  <h2>Unsere Aktivitäten</h2>
+  <h2>Vorstand</h2>
+  <div class="cards">
+    <div class="card"><h3>Fabian Kummer</h3><p>Präsident</p></div>
+    <div class="card"><h3>Marc E. Friedli</h3><p>Finanzen</p></div>
+    <div class="card"><h3>Michael Brudermann</h3><p>Ehrenpräsident</p></div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="section" id="activities">
+  <h2>Aktivitäten</h2>
 
   <div class="event">
     <img src="silvester.jpg">
-    <div class="event-text">
-      <h3>Silvesterfeuer 2025</h3>
-      <p>Rund 100–120 Personen genossen eine sternenklare Nacht.</p>
-      <p>Danke an unsere Sponsoren.</p>
-    </div>
+    <p>Silvesterfeuer 2025</p>
   </div>
-</section>
 
-<section class="section">
   <div class="event">
     <img src="1august.jpg">
-    <div class="event-text">
-      <h3>1. Augustbrunch mit Bundesfeier auf dem Auhof</h3>
-      <p>
-        In Zusammenarbeit mit der Gemeinde Rupperswil organisieren wir
-        einen 1. Augustbrunch sowie die offizielle Bundesfeier.
-      </p>
-      <p>Weitere Infos folgen.</p>
-    </div>
+    <p>1. Augustbrunch</p>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta">
   <h2>Werde Teil unserer Gemeinschaft</h2>
+
+  <div style="margin-top:20px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+    <a href="mailto:info@iglr.ch" style="background:white;color:#1e3a8a;padding:12px 22px;border-radius:10px;text-decoration:none;">Kontakt</a>
+    <a href="mailto:info@iglr.ch" style="background:#0f172a;color:white;padding:12px 22px;border-radius:10px;text-decoration:none;">Mitglied werden</a>
+  </div>
 </section>
 
 <section class="section" id="impressum">
   <h2>Impressum</h2>
-  <p>
-    <strong>IG lebändigs Robischwyl - Verein für Gemeinschaft und Integration Rupperswil</strong><br>
-    5102 Rupperswil<br>
-    Schweiz<br>
-    E-Mail: info@iglr.ch
-  </p>
+  <p>Rupperswil · info@iglr.ch</p>
 </section>
 
 <section class="section" id="datenschutz">
   <h2>Datenschutz</h2>
-  <p>
-    Wir behandeln personenbezogene Daten vertraulich gemäss Schweizer Datenschutzgesetz.
-  </p>
+  <p>Gemäss Schweizer Datenschutzgesetz.</p>
 </section>
 
 <footer>
   <img src="logo.png">
-  <p>Verein für Gemeinschaft und Integration Rupperswil</p>
-  <p>info@iglr.ch</p>
+  <p>IGLR</p>
 </footer>
 
 </body>
